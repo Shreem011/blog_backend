@@ -22,3 +22,4 @@ blog/yarn-error.log*
 
 backend/node_modules
 node_modules
+.env

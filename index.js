@@ -5,14 +5,15 @@ const mongoose = require("mongoose");
 const port = process.env.PORT || 5000;
 const cors = require("cors");
 
-const uri =
-  "mongodb+srv://shreem:aryal@cluster1.eqg0tpe.mongodb.net/firstdatabase?retryWrites=true&w=majority";
+// const uri =
+//   "mongodb+srv://shreem:aryal@cluster1.eqg0tpe.mongodb.net/firstdatabase?retryWrites=true&w=majority";
+
 dotenv.config();
 
 app.use(cors());
 
 mongoose
-  .connect(uri, {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
